@@ -10,23 +10,21 @@ methods to construct the new name. For example, given first = "walt";
 the program should create a new string with the text “Altway Avitchsay” and print it.
 */
 
-fun main(){
+fun main() {
     var first = "jabu"
     var last = "mbara"
-    val ay = "ay"
-
-    val firstLetter = first[0]
-    first = first.substring(1)
-    first += firstLetter
-    val newFirst = first[0].toUpperCase()
-    first = first.substring(1)
-
-    val firstLetterLastName = last[0]
-    last = last.substring(1)
-    last += firstLetterLastName
-    val newFirstLastName = last[0].toUpperCase()
-    last = last.substring(1)
+    println("${moveFirstAndAddAy(first)} ${moveFirstAndAddAy(last)}")
 
 
-    println("First: ${newFirst+first+ay} Last: ${newFirstLastName+last+ay}")
 }
+fun moveFirstAndAddAy(name: String): String {
+    var firstLetter = name[0]
+    var nameCut = name.substring(1)
+    nameCut += firstLetter
+    var newFirst = nameCut[0].toUpperCase()
+    nameCut = nameCut.substring(1)
+
+    return newFirst + nameCut + "ay"
+
+}
+
