@@ -15,7 +15,11 @@ fun main(){
     var stringToBeChanged = "I hate you"
     println("The line of text to be changed is: \n\t\t $stringToBeChanged")
 
-    if (stringToBeChanged.contains("hate")){
-       println("I have rephrased that line to read: \n\t\t I love you")
-    }
+    val pos = stringToBeChanged.indexOf("hate")
+    var end = stringToBeChanged.substring(pos + "hate".length)
+    stringToBeChanged = stringToBeChanged.substring(0,pos) + "love" + end
+
+    println("The changed line is: \n\t\t $stringToBeChanged")
+
+
 }

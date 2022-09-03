@@ -8,9 +8,9 @@ using the following equation:
  */
 
 fun main(){
-    val princi_amnt = 1000
-    val int_rate = 0.05
-    val no_of_yrs = 5
-    val SimpleInterest = (princi_amnt * int_rate * no_of_yrs) / 100
-    println("Simple Interest is $SimpleInterest")
+
+    println("Simple Interest is ${intCalc(1000.0, 0.05, 5.0)}")
+}
+fun intCalc(prAmt: Double, rate: Double, yrs: Double):Double{
+    return (prAmt * rate * yrs) / 100
 }
