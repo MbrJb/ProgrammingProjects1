@@ -1,7 +1,6 @@
 package com.example.interview
 
 import java.util.*
-import kotlin.math.sqrt
 
 /*
 1. The Babylonian algorithm to compute the square root of a positive number n is as
