@@ -19,19 +19,15 @@ small values of n .
 fun main(){
 
     println("Enter the positive number you want the square root for: ")
-    var read = Scanner(System.`in`)
-    var n = read.nextDouble()
-
-    var sqrt = stepThreeSetGuess((stepOneGuess(n)), stepTwoComputeR(n, stepOneGuess(n)))
+    val read = Scanner(System.`in`)
+    val n = read.nextDouble()
     var guess = 0.0
-
     var i = 0
-    while (i < 5){
-        sqrt
-        i++
-        guess = sqrt
-    }
 
+    while (i < 5){
+       guess = stepThreeSetGuess((stepOneGuess(n)), stepTwoComputeR(n, stepOneGuess(n)))
+        i++
+    }
     println("The guessed square root is: $guess")
 }
 
