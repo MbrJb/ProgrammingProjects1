@@ -7,7 +7,6 @@ is an equal chance of rolling any digit from 1 to 6.
         for (int i = 0; i < 100; i++){System.out.println(randGenerator.nextInt(6) + 1);}}
     public static void main(String[] args){Random randGenerator = new Random();
     printDiceRolls(randGenerator);}
-
 Create your own class, LoadedDice , that is derived from Random .
 The constructor for LoadedDice needs to only invoke Random ’s constructor.
 Override the public int nextInt(int num) method so that with a 50% chance, your new method always
