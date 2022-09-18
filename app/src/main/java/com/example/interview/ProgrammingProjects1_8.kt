@@ -4,7 +4,7 @@ package com.example.interview
 Modify the program so that it uses the spelling conventions, constant naming
 conventions, and formatting style recommended in this book.
 		public class vehicleAvgSpeed {
-		public static void main(String[] args)
+		public static void com.example.interview.main(String[] args)
 		{
 		double TIME;
 		
