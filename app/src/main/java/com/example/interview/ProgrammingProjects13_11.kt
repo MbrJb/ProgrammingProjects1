@@ -5,7 +5,7 @@ number. In the main method, create an array of at least five Student objects, so
 Arrays.sort , and output the students. They should be listed by ascending student number. Next,
 modify the compareTo method so it orders Student objects based on the lexicographic ordering of
 their last name. Without modification to the main method, the program should now output the students
-ordered by name. */
+ordered by name.*/
 package com.example.interview
 fun main(){
 
