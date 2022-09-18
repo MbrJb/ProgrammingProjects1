@@ -2,33 +2,20 @@
 along with appropriate constructors, accessors, and mutators. Make the Student class implement the
 Comparable interface. Define the compareTo method to order Student objects based on the student ID
 number. In the main method, create an array of at least five Student objects, sort them using
-Arrays.sort , and output the students. They should be listed by ascending student number. Next,
-modify the compareTo method so it orders Student objects based on the lexicographic ordering of
-their last name. Without modification to the main method, the program should now output the students
-ordered by name.*/
+Arrays.sort , and output the students. They should be listed by ascending student number.*/
 package com.example.interview
-fun main(){
-
+fun main() {
     val studentsVar = arrayOf(Student("Bret", 6), Student("Adam", 2),
-    Student("Cathy", 3), Student("Daisy", 4), Student("Elle", 5))
-
-    println("Before sort: ${studentsVar.contentToString()}")
+    Student("Cathy", 7), Student("Daisy", 4), Student("Elle", 5))
     studentsVar.sort()
-    println("After: ${studentsVar.contentToString()}")
-
-// Line 15 doesn't do anything
-}
+    println("First order by studentID: ${studentsVar.contentToString()}")
+    }
 
 data class Student(val lastName: String, val studentID: Int): Comparable<Student>{
 
-    //I'm having trouble comparing studentID sa Bret vs sa Cathy
     override fun compareTo(other: Student): Int {
-        var result = 0
-        studentID.compareTo(other.studentID)
-        if (studentID < other.studentID){
-            result = 1
-        }
-        return result
+        return this.studentID.compareTo(other.studentID)
+
     }
 
 }
