@@ -11,7 +11,8 @@ fun main(){
 
     val studentsVar = arrayOf(Student("Bret", 6), Student("Adam", 2),
     Student("Cathy", 3), Student("Daisy", 4), Student("Elle", 5))
-    println("Array before sort: ${studentsVar.contentToString()}")
+
+    println("Before sort: ${studentsVar.contentToString()}")
     studentsVar.sort()
     println("After: ${studentsVar.contentToString()}")
 
@@ -20,10 +21,13 @@ fun main(){
 
 data class Student(val lastName: String, val studentID: Int): Comparable<Student>{
 
-    //How do compare last name against itself?
+    //I'm having trouble comparing studentID sa Bret vs sa Cathy
     override fun compareTo(other: Student): Int {
         var result = 0
-        if (lastName < other.toString()){ result = 1}
+        studentID.compareTo(other.studentID)
+        if (studentID < other.studentID){
+            result = 1
+        }
         return result
     }
 
